@@ -144,8 +144,10 @@ header {
   right: 0; }
 
 .widget.latest-posts ul li, .footer-widget.latest-posts ul li {
-  margin: 14px 0;
+  padding: 14px 0;
   border-bottom: 1px solid #f2f2f2; }
+  .widget.latest-posts ul li:last-child, .footer-widget.latest-posts ul li:last-child {
+    border-bottom: 0; }
   .widget.latest-posts ul li a h4, .footer-widget.latest-posts ul li a h4 {
     transition: color .3s ease; }
   .widget.latest-posts ul li a:hover, .footer-widget.latest-posts ul li a:hover {
@@ -153,10 +155,30 @@ header {
     .widget.latest-posts ul li a:hover h4, .footer-widget.latest-posts ul li a:hover h4 {
       color: #03A9F4; }
 
+.widget.latest-posts .media-left .latest-posts-thumb, .footer-widget.latest-posts .media-left .latest-posts-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.21), 3px 2px 5px 0px rgba(0, 0, 0, 0.21), 0 3px 1px -2px rgba(0, 0, 0, 0.2); }
+
+.widget.latest-posts .media-left a img, .footer-widget.latest-posts .media-left a img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; }
+
 .widget.latest-posts .media-body h4, .footer-widget.latest-posts .media-body h4 {
   font-size: 16px;
   color: #333;
   font-weight: 500; }
+
+.widget.latest-posts .media-body .categories, .footer-widget.latest-posts .media-body .categories {
+  font-weight: 400;
+  font-size: .8em;
+  text-transform: uppercase;
+  color: #888; }
+  .widget.latest-posts .media-body .categories i.fa, .footer-widget.latest-posts .media-body .categories i.fa {
+    color: #03a9f4; }
 
 .widget.tags ul, .footer-widget.tags ul {
   padding-left: 5px; }
