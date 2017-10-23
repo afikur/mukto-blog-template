@@ -80,12 +80,25 @@ h1 {
     border: 0;
     padding: 0; }
   .articles .article .panel-body {
-    padding: 60px; }
+    padding: 40px;
+    line-height: 1.45em; }
     .articles .article .panel-body h1 {
-      margin-top: 0; }
+      margin-top: 0;
+      margin-bottom: 1em; }
   .articles .article .panel-footer {
-    padding: 35px 60px;
+    padding: 35px 40px;
     border-top: 0;
-    background-color: #f7f7f7; }
+    background-color: #f7f7f7;
+    color: #888; }
+    .articles .article .panel-footer ul li {
+      padding: 3px 15px 3px 0; }
   .articles .article .continue-reading {
-    color: #03A9F4; }
+    margin-top: 20px; }
+    .articles .article .continue-reading a {
+      color: #03A9F4;
+      border-bottom: 1px solid #03A9F4; }
+      .articles .article .continue-reading a i.fa {
+        border: 0; }
+      .articles .article .continue-reading a:hover {
+        color: #60ccfd;
+        text-decoration: none; }
