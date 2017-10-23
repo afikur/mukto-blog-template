@@ -12,6 +12,7 @@
   "author": "Afikur Rahman",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^3.3.7",
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "extract-text-webpack-plugin": "^3.0.1",
