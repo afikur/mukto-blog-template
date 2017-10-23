@@ -1,0 +1,24 @@
+#footer-top {
+	padding: $primary-padding 0;
+
+	color: white;
+	a h4{
+		color: white;
+	}
+	background: $footer-top-background-color;
+	.footer-widget {
+		h3 {
+			margin-top: 0;
+		}
+	}
+}
+
+footer {
+	p {
+		margin: 0;
+		padding: 0;
+	}
+	color: white;
+	padding: 15px 0;
+	background-color: darken($footer-top-background-color, 10);
+}
