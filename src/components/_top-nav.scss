@@ -1,0 +1,31 @@
+.top-nav {
+	.navbar-collapse {
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.navbar {
+		border-radius: 0;
+		margin-bottom: 40px;
+		min-height: 28px;
+	}
+
+	ul.nav li>a {
+		padding-top: 3px;
+		padding-bottom: 3px;
+		font-size: $top-nav-font-size;
+		color: $top-nav-font-color;
+		
+		i.fa {
+			margin-right: 4px;
+		}
+	}
+
+	ul.nav li:first-child a {
+		padding-left: 0;
+	}
+
+	ul.navbar-right li>a{
+		padding: 3px 6px;
+	}
+}

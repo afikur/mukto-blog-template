@@ -1,0 +1,39 @@
+
+.articles {
+	.article {
+		margin-bottom: $primary-margin;
+		
+		&.panel {
+			border: 0;
+			box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+			transition: all 0.3s ease;
+			&:hover {
+				box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+			}
+		}
+
+		.panel-heading {
+			background-color: transparent;
+			border-color: transparent;
+			border: 0;
+			padding: 0;
+		}
+
+		.panel-body {
+			padding: $primary-padding;
+			
+			h1 {
+				margin-top: 0;
+			}
+		}
+		
+		.panel-footer {
+			padding: 35px $primary-padding;
+			border-top: 0;
+			background-color: $article-footer-background-color;
+		}
+		.continue-reading {
+			color: $primary-color;
+		}
+	}
+}
