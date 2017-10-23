@@ -11,6 +11,21 @@
 			margin-top: 0;
 		}
 	}
+
+	.footer-top-logo {
+		width: 60%;
+		@media screen and (max-width: 768) {
+			width: 100%;
+		}
+		
+		margin-bottom: $primary-margin / 2;
+	}
+}
+
+.footer-widget.latest-posts {
+	ul li {
+		border-bottom-color: lighten($footer-top-background-color, 5);
+	}
 }
 
 footer {

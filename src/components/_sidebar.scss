@@ -50,6 +50,16 @@
 	ul li {
 		margin: 14px 0;
 		border-bottom: 1px solid #f2f2f2;
+		a h4 {
+			transition: color .3s ease;
+		}
+		a:hover {
+			text-decoration: none;
+			
+			h4 {
+				color: $primary-color;
+			}
+		}
 	}
 	
 	.media-body {
