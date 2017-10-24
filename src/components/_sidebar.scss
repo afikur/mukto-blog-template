@@ -73,14 +73,24 @@
 		}
 	}
 	
+	.media {
+		overflow: unset;
+	}
+	
+	.media-left, .media>.pull-left {
+		padding-right: 0;
+	}
+	
 	.media-left {
 		.latest-posts-thumb {
-			width: 60px;
-			height: 60px;
-			border-radius: 50%;
-			margin-bottom: 5px;
-			// box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
-			box-shadow: 2px 3px 2px 0 rgba(0, 0, 0, 0.21), 3px 2px 5px 0px rgba(0, 0, 0, 0.21), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+			a {
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				margin-bottom: 5px;
+				box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
+				display: block;
+			}
 		}
 
 		a img {
