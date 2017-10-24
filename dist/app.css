@@ -133,6 +133,21 @@ header {
         color: #60ccfd;
         text-decoration: none; }
 
+.articles .pagination {
+  box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+  transition: all .3s ease; }
+  .articles .pagination:hover {
+    box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2); }
+  .articles .pagination li a {
+    color: #8c8c8c;
+    padding: 12px 24px;
+    background-color: #f2f2f2;
+    border: 0;
+    transition: background-color .3s ease; }
+    .articles .pagination li a:hover {
+      background-color: #03A9F4;
+      color: #fff; }
+
 .widgets {
   padding: 0 15px; }
   @media screen and (max-width: 768px) {

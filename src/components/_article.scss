@@ -88,4 +88,25 @@
 			}
 		}
 	}
+
+	.pagination {
+		box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+		transition: all .3s ease;
+		&:hover {
+			box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2);
+		}
+
+		li a {
+			color: darken($light-grey, 40);
+			padding: 12px 24px;
+			background-color: $light-grey;
+			border: 0;
+			transition: background-color .3s ease;
+			
+			&:hover {
+				background-color: $primary-color;
+				color: #fff;
+			}
+		}
+	}
 }
