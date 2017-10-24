@@ -1,5 +1,5 @@
 #footer-top {
-	padding: $primary-padding 0;
+	padding: $primary-padding*1.5 0;
 
 	color: white;
 	a h4{
@@ -25,6 +25,20 @@
 .footer-widget.latest-posts {
 	ul li {
 		border-bottom-color: lighten($footer-top-background-color, 5);
+	}
+}
+
+.footer-widget.tags {
+	
+	ul>li a{
+		background: lighten($footer-top-background-color, 10);
+		color: #888;
+		
+		&:hover {
+			text-decoration: none;
+			background: $primary-color;
+			color: white;
+		}
 	}
 }
 

@@ -17,7 +17,37 @@
 			border-color: transparent;
 			border: 0;
 			padding: 0;
+			position: relative;
+			
+			&::after {
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: $primary-color;
+				position: absolute;
+				left: 0;
+				top: 0;
+				display: block;
+				opacity: .65;
+			}
+
+			h1 {
+				position: absolute;
+				top: $primary-margin / 1.5;
+				left: $primary-margin / 1.5;
+				color: #fff;
+				text-shadow: 1px 1px 0 darken($primary-color, 20);
+				margin-top: 0;
+				z-index: 1;
+			}
+
+			.thumbnail-image {
+				max-height: 165px;
+				min-height: 165px;
+				overflow: hidden;
+			}
 		}
+		
 
 		.panel-body {
 			padding: $primary-padding/1.5;

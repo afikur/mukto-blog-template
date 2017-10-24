@@ -85,7 +85,30 @@ header {
     background-color: transparent;
     border-color: transparent;
     border: 0;
-    padding: 0; }
+    padding: 0;
+    position: relative; }
+    .articles .article .panel-heading::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: #03A9F4;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      opacity: .65; }
+    .articles .article .panel-heading h1 {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      color: #fff;
+      text-shadow: 1px 1px 0 #02638f;
+      margin-top: 0;
+      z-index: 1; }
+    .articles .article .panel-heading .thumbnail-image {
+      max-height: 165px;
+      min-height: 165px;
+      overflow: hidden; }
   .articles .article .panel-body {
     padding: 40px;
     line-height: 1.45em; }
@@ -109,6 +132,12 @@ header {
       .articles .article .continue-reading a:hover {
         color: #60ccfd;
         text-decoration: none; }
+
+.widgets {
+  padding: 0 15px; }
+  @media screen and (max-width: 768px) {
+    .widgets {
+      padding: 0; } }
 
 .widget {
   margin-bottom: 60px; }
@@ -201,9 +230,9 @@ header {
     color: white; }
 
 #footer-top {
-  padding: 60px 0;
+  padding: 90px 0;
   color: white;
-  background: #333; }
+  background: #262626; }
   #footer-top a h4 {
     color: white; }
   #footer-top .footer-widget h3 {
@@ -216,12 +245,20 @@ header {
         width: 100%; } }
 
 .footer-widget.latest-posts ul li {
-  border-bottom-color: #404040; }
+  border-bottom-color: #333333; }
+
+.footer-widget.tags ul > li a {
+  background: #404040;
+  color: #888; }
+  .footer-widget.tags ul > li a:hover {
+    text-decoration: none;
+    background: #03A9F4;
+    color: white; }
 
 footer {
   color: white;
   padding: 15px 0;
-  background-color: #1a1a1a; }
+  background-color: #0d0d0d; }
   footer p {
     margin: 0;
     padding: 0; }
