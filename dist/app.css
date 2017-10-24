@@ -301,9 +301,14 @@ header {
   font-weight: 400;
   font-size: .8em;
   text-transform: uppercase;
-  color: #888; }
+  color: #8c8c8c; }
   .widget.latest-posts .media-body .categories span.icon-folder-open, .footer-widget.latest-posts .media-body .categories span.icon-folder-open {
     color: #03a9f4; }
+  .widget.latest-posts .media-body .categories a, .footer-widget.latest-posts .media-body .categories a {
+    color: #8c8c8c;
+    transition: color .3s; }
+  .widget.latest-posts .media-body .categories a:hover, .footer-widget.latest-posts .media-body .categories a:hover {
+    color: #03A9F4; }
 
 .widget.tags ul, .footer-widget.tags ul {
   padding-left: 5px; }

@@ -102,10 +102,18 @@
 			font-weight: 400;
 			font-size: .8em;
 			text-transform: uppercase;
-			// color: $primary-color;
-			color: #888;
+			
+			color: darken($light-grey, 40);
 			span.icon-folder-open {
 				color: darken($primary-color, 0);
+			}
+			a {
+				color: darken($light-grey, 40);
+				transition: color .3s;
+			}
+
+			a:hover {
+				color: $primary-color;
 			}
 		}
 	}
