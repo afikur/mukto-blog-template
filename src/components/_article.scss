@@ -52,7 +52,7 @@
 					position: absolute;
 					bottom: -30px;
 					left: 40px;
-					z-index: 1;
+					z-index: 2;
 					border-radius: 50%;
 					overflow: hidden;
 					box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
@@ -71,6 +71,26 @@
 					  	width: auto;
 					  	height: auto;
 					}
+				}
+				
+				.user-info {
+					width: 0%;
+				    height: 60px;
+				    background: $light-grey;
+				    border-radius: 50px;
+				    display: block;
+				    position: absolute;
+				    bottom: -31px;
+				    left: 50px;
+				    z-index: 1;
+				    -webkit-transition: width 1s ease-in-out;
+				    -moz-transition: width 1s ease-in-out;
+				    -o-transition: width 1s ease-in-out;
+				    transition: width 1s ease-in-out;
+				}
+
+				.user-info-active {
+					width: 200px;
 				}
 			}
 		}
