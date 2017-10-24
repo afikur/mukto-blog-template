@@ -77,20 +77,42 @@
 					width: 0%;
 				    height: 60px;
 				    background: $light-grey;
-				    border-radius: 50px;
+				    border-radius: 0 50px 50px 0;
 				    display: block;
 				    position: absolute;
 				    bottom: -31px;
-				    left: 50px;
+				    left: 65px;
 				    z-index: 1;
-				    -webkit-transition: width 1s ease-in-out;
-				    -moz-transition: width 1s ease-in-out;
-				    -o-transition: width 1s ease-in-out;
-				    transition: width 1s ease-in-out;
+				    -webkit-transition: width .5s ease-in-out;
+				    -moz-transition: width .5s ease-in-out;
+				    -o-transition: width .5s ease-in-out;
+				    transition: width .5s ease-in-out;
+					
+					h4 {
+						margin-top: 0;
+					}
+
+				    a {
+				    	display: none;
+				    	padding-top: 20px;
+				    	color: darken($light-grey, 40);
+						
+						-webkit-transition: all .3s ease-in-out;
+					    -moz-transition: all .3s ease-in-out;
+					    -o-transition: all .3s ease-in-out;
+					    transition: all .3s ease-in-out;
+
+				    	&:hover {
+				    		color: $primary-color;
+				    	}
+				    }
 				}
 
 				.user-info-active {
 					width: 200px;
+					a {
+						display: block;
+					}
 				}
 			}
 		}

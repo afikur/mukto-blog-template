@@ -215,18 +215,32 @@ header {
         width: 0%;
         height: 60px;
         background: #f2f2f2;
-        border-radius: 50px;
+        border-radius: 0 50px 50px 0;
         display: block;
         position: absolute;
         bottom: -31px;
-        left: 50px;
+        left: 65px;
         z-index: 1;
-        -webkit-transition: width 1s ease-in-out;
-        -moz-transition: width 1s ease-in-out;
-        -o-transition: width 1s ease-in-out;
-        transition: width 1s ease-in-out; }
+        -webkit-transition: width .5s ease-in-out;
+        -moz-transition: width .5s ease-in-out;
+        -o-transition: width .5s ease-in-out;
+        transition: width .5s ease-in-out; }
+        .articles .article .panel-heading .thumbnail-image .user-info h4 {
+          margin-top: 0; }
+        .articles .article .panel-heading .thumbnail-image .user-info a {
+          display: none;
+          padding-top: 20px;
+          color: #8c8c8c;
+          -webkit-transition: all .3s ease-in-out;
+          -moz-transition: all .3s ease-in-out;
+          -o-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out; }
+          .articles .article .panel-heading .thumbnail-image .user-info a:hover {
+            color: #03A9F4; }
       .articles .article .panel-heading .thumbnail-image .user-info-active {
         width: 200px; }
+        .articles .article .panel-heading .thumbnail-image .user-info-active a {
+          display: block; }
   .articles .article .panel-body {
     padding: 40px;
     line-height: 1.45em; }

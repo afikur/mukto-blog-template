@@ -6,4 +6,5 @@ $(document).ready(function() {
 	$(".article .user-info").mouseleave(function() {
 		$(".article .user-info").removeClass("user-info-active");
 	});
+
 });
