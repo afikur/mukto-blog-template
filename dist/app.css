@@ -5,6 +5,83 @@ body {
 h1 {
   font-size: 36px; }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url(images/icomoon.a1bc408b2224591d0aa8aa1b9e4b1dd6.eot);
+  src: url(images/icomoon.a1bc408b2224591d0aa8aa1b9e4b1dd6.eot#iefix) format("embedded-opentype"), url(images/icomoon.f3c968eef507754d94d5d6c71f02019f.ttf) format("truetype"), url(images/icomoon.f1ae9149054cfdcefe9a881eab1bd6f4.woff) format("woff"), url(images/icomoon.f3a18ae18d1a670db6b5104c6b322217.svg#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-folder-open:before {
+  content: "\E930"; }
+
+.icon-price-tags:before {
+  content: "\E936"; }
+
+.icon-calendar:before {
+  content: "\E953"; }
+
+.icon-bubble:before {
+  content: "\E96B"; }
+
+.icon-user:before {
+  content: "\E971"; }
+
+.icon-spinner8:before {
+  content: "\E981"; }
+
+.icon-spinner11:before {
+  content: "\E984"; }
+
+.icon-search:before {
+  content: "\E986"; }
+
+.icon-arrow-right2:before {
+  content: "\EA3C"; }
+
+.icon-arrow-left2:before {
+  content: "\EA40"; }
+
+.icon-google-plus:before {
+  content: "\EA8B"; }
+
+.icon-facebook:before {
+  content: "\EA90"; }
+
+.icon-twitter:before {
+  content: "\EA96"; }
+
+.icon-rss:before {
+  content: "\EA9B"; }
+
+.icon-youtube:before {
+  content: "\EA9D"; }
+
+.icon-github:before {
+  content: "\EAB0"; }
+
+.icon-tumblr:before {
+  content: "\EAB9"; }
+
+.icon-linkedin2:before {
+  content: "\EACA"; }
+
+.icon-stackoverflow:before {
+  content: "\EAD0"; }
+
 .top-nav .navbar-collapse {
   padding-right: 0px;
   padding-left: 0px; }
@@ -119,18 +196,20 @@ header {
     padding: 35px 40px;
     border-top: 0;
     background-color: #f7f7f7;
-    color: #888; }
+    color: #7f7f7f; }
     .articles .article .panel-footer ul li {
       padding: 3px 15px 3px 0; }
+    .articles .article .panel-footer a {
+      color: #8c8c8c; }
   .articles .article .continue-reading {
     margin-top: 20px; }
     .articles .article .continue-reading a {
-      color: #03A9F4;
-      border-bottom: 1px solid #03A9F4; }
-      .articles .article .continue-reading a i.fa {
-        border: 0; }
-      .articles .article .continue-reading a:hover {
-        color: #60ccfd;
+      color: #000;
+      border-bottom: 1px solid #000;
+      transition: color .3s; }
+      .articles .article .continue-reading a:hover, .articles .article .continue-reading a:active, .articles .article .continue-reading a:focus {
+        color: #03A9F4;
+        border-bottom: 1px solid #03A9F4;
         text-decoration: none; }
 
 .articles .pagination {
@@ -138,6 +217,8 @@ header {
   transition: all .3s ease; }
   .articles .pagination:hover {
     box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2); }
+  .articles .pagination li.active a {
+    color: #03A9F4; }
   .articles .pagination li a {
     color: #8c8c8c;
     padding: 12px 24px;
@@ -221,7 +302,7 @@ header {
   font-size: .8em;
   text-transform: uppercase;
   color: #888; }
-  .widget.latest-posts .media-body .categories i.fa, .footer-widget.latest-posts .media-body .categories i.fa {
+  .widget.latest-posts .media-body .categories span.icon-folder-open, .footer-widget.latest-posts .media-body .categories span.icon-folder-open {
     color: #03a9f4; }
 
 .widget.tags ul, .footer-widget.tags ul {
