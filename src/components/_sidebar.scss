@@ -57,7 +57,7 @@
 .widget.latest-posts, .footer-widget.latest-posts {
 	ul li {
 		padding: 14px 0;
-		border-bottom: 1px solid #f2f2f2;
+		border-bottom: 1px solid $light-grey;
 		&:last-child {
 			border-bottom: 0;
 		}
@@ -154,4 +154,185 @@
 			color: white;
 		}
 	}
+}
+
+
+.widget.widget-categories {
+  
+    p {
+        padding: 0 10px;
+    }
+
+    p, li {
+        font-weight: bold;
+        line-height: 35px;
+        font-size: 12px;
+    }
+
+    .title {
+        color: #fff;
+        background-color: #1ba0eb;
+        @include border-radius(3px 3px 0 0);
+    }
+
+    .title_items {
+        // color: #94a4c3;
+        color: darken($light-grey, 40);
+        cursor: pointer;
+        position: relative;
+        background-color: #fff;
+        border-bottom: 1px solid $light-grey;
+        @include transition(.2s linear background-color);
+
+        &:hover {
+          background-color: #f4f4f4;
+        }
+        
+        &.active + ul + .title_items {
+          border-top: 1px solid #e4effd;
+        }
+        
+        &.active:after {
+          height: 5px;
+          width: 5px;
+          right: 14px;
+          margin-top: -2.5px;
+        }
+        
+        &:before, &:after {
+          content: "";
+          position: absolute;
+          @include border-radius(3px);
+          background-color: #c3d0e8;
+          @include transition(.3s linear all);
+        }
+
+        &:before {
+          height: 5px;
+          width: 13px;
+          top: 50%;
+          right: 10px;
+          margin-top: -2.5px;
+        }
+        &:after {
+          height: 13px;
+          width: 5px;
+          top: 50%;
+          right: 14px;
+          margin-top: -6.5px;
+        }
+    }
+    
+    ul {
+        @include transition-property(all);
+        @include transition-timing-function(linear);
+
+        li ul li{
+            height: 0;
+            @include opacity(0);
+            color: darken($light-grey, 40);
+            background-color: lighten($light-grey, 3);
+            @include transition(.2s linear all);
+
+            &:nth-child(odd) {
+                @include transform(scale(.5) translateX(-150px));
+            }
+            
+            &:nth-child(even) {
+                @include transform(scale(.5) translateX(150px));
+            }
+
+            &.visible {
+                height: 36px;
+                @include opacity(1);
+                @include transform(scale(1) translateX(0));
+            }
+
+            &:last-child a {
+                border-bottom: none;
+            }
+            
+            &:nth-child(1) a:before,
+            &:nth-child(1) a:after {
+                border-color: #5db6e2;
+            }
+            
+            &:nth-child(2) a:before,
+            &:nth-child(2) a:after {
+                border-color: #c0a2f1;
+            }
+            
+            &:nth-child(3) a:before,
+            &:nth-child(3) a:after {
+                border-color: #f7a238;
+            }
+            
+            &:nth-child(4) a:before,
+            &:nth-child(4) a:after {
+                border-color: #f6d04d;
+            }
+            
+            &:nth-child(5) a:before,
+            &:nth-child(5) a:after {
+                border-color: #40c9a1;
+            }
+            
+            &:nth-child(6) a:before,
+            &:nth-child(6) a:after {
+                border-color: #ea8b8b;
+            }
+            
+            &:nth-child(7) a:before,
+            &:nth-child(7) a:after {
+                border-color: #fe8ae0;
+            }
+
+            &:nth-child(8) a:before,
+            &:nth-child(8) a:after {
+                border-color: #abb6d2;
+            }
+        }
+    }
+
+
+    a {
+        margin: 0 15px;
+        color: darken($light-grey, 40);
+        display: block;
+        cursor: pointer;
+        position: relative;
+        padding: 0 10px 0 25px;
+        border-bottom: 1px solid $light-grey;
+        @include transition(.3s linear color);
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &:before {
+            content: "";
+            height: 10px;
+            width: 10px;
+            top: 50%;
+            left: 0;
+            margin-top: -9px;
+            position: absolute;
+            border-width: 3px;
+            border-style: solid;
+            @include border-radius(50%);
+        }
+
+        &:after {
+            content: "";
+            top: 50%;
+            left: 5px;
+            margin-top: -4px;
+            position: absolute;
+            border-width: 3px;
+            border-style: solid;
+            @include opacity(0);
+            @include border-radius(50%);
+            @include transition(.2s linear all);
+        }
+    }
 }

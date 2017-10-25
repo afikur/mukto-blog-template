@@ -23,7 +23,8 @@ module.exports = {
 	    	{
 	    		test:/\.s[ac]ss$/,
 	    		use: ExtractTextPlugin.extract({
-	    			use: ['css-loader', 'sass-loader'],
+	    			use: "css-loader!sass-loader?includePaths[]=" + path.resolve(__dirname, "./node_modules/compass-mixins/lib"),
+	    			// use: ['css-loader', 'sass-loader'],
 	    			fallback: 'style-loader'
 	    		})
 	    	},
