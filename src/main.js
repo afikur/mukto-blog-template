@@ -2,14 +2,20 @@ var $ = jQuery;
 
 $(document).ready(function() {
 	//article user-image-hover-effect
-	$(".article a.user").hover(function() {
-		$(".article .user-info").addClass("user-info-active");
-	});
+	if($(window).width() >= 1170) {
+		$(".article a.user").hover(function() {
+			$(".article .user-info").addClass("user-info-active");
+		});
 
-	$(".article .user-info").mouseleave(function() {
-		$(".article .user-info").removeClass("user-info-active");
-	});
-
+		$(".article .user-info").mouseleave(function() {
+			$(".article .user-info").removeClass("user-info-active");
+		});
+	} else {
+		$(".article a.user").click(function(event) {
+			event.preventDefault();
+			$(".article .user-info").toggleClass("user-info-active");
+		});
+	}
 
 	//categories
 	var transition_timeout = 40;
@@ -33,5 +39,4 @@ $(document).ready(function() {
 	  }
 	
 	});
-
 });
