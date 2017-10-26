@@ -166,21 +166,23 @@ header {
 #content {
   padding: 60px 0; }
 
-.articles .article {
+.article {
   margin-bottom: 60px; }
-  .articles .article.panel {
+  .article.panel {
     border: 0;
-    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    -webkit-box-shadow: rgba(46, 61, 73, 0.2) 5px 5px 25px 0px;
+    -moz-box-shadow: rgba(46, 61, 73, 0.2) 5px 5px 25px 0px;
+    box-shadow: rgba(46, 61, 73, 0.2) 5px 5px 25px 0px;
     transition: all 0.3s ease; }
-    .articles .article.panel:hover {
+    .article.panel:hover {
       box-shadow: 2px 4px 8px 0px rgba(46, 61, 73, 0.2); }
-  .articles .article .panel-heading {
+  .article .panel-heading {
     background-color: transparent;
     border-color: transparent;
     border: 0;
     padding: 0;
     position: relative; }
-    .articles .article .panel-heading::after {
+    .article .panel-heading::after {
       content: "";
       width: 100%;
       height: 100%;
@@ -190,7 +192,7 @@ header {
       top: 0;
       display: block;
       opacity: .65; }
-    .articles .article .panel-heading h1 {
+    .article .panel-heading h1 {
       position: absolute;
       top: 40px;
       left: 40px;
@@ -199,13 +201,13 @@ header {
       margin-top: 0;
       z-index: 1; }
       @media screen and (max-width: 640px) {
-        .articles .article .panel-heading h1 {
+        .article .panel-heading h1 {
           font-size: 25.71429px; } }
-    .articles .article .panel-heading .thumbnail-image {
+    .article .panel-heading .thumbnail-image {
       max-height: 165px;
       min-height: 165px;
       overflow: hidden; }
-      .articles .article .panel-heading .thumbnail-image a.user {
+      .article .panel-heading .thumbnail-image a.user {
         width: 60px;
         height: 60px;
         position: absolute;
@@ -215,7 +217,7 @@ header {
         border-radius: 50%;
         overflow: hidden;
         box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36); }
-        .articles .article .panel-heading .thumbnail-image a.user img {
+        .article .panel-heading .thumbnail-image a.user img {
           position: absolute;
           top: 50%;
           left: 50%;
@@ -230,7 +232,7 @@ header {
           max-height: 60px;
           width: auto;
           height: auto; }
-      .articles .article .panel-heading .thumbnail-image .user-info {
+      .article .panel-heading .thumbnail-image .user-info {
         width: 0%;
         height: 60px;
         background: #f2f2f2;
@@ -244,9 +246,9 @@ header {
         -moz-transition: width .5s ease-in-out;
         -o-transition: width .5s ease-in-out;
         transition: width .5s ease-in-out; }
-        .articles .article .panel-heading .thumbnail-image .user-info h4 {
+        .article .panel-heading .thumbnail-image .user-info h4 {
           margin-top: 0; }
-        .articles .article .panel-heading .thumbnail-image .user-info a {
+        .article .panel-heading .thumbnail-image .user-info a {
           display: none;
           padding-top: 20px;
           color: #8c8c8c;
@@ -254,34 +256,34 @@ header {
           -moz-transition: all .3s ease-in-out;
           -o-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out; }
-          .articles .article .panel-heading .thumbnail-image .user-info a:hover {
+          .article .panel-heading .thumbnail-image .user-info a:hover {
             color: #03A9F4; }
-      .articles .article .panel-heading .thumbnail-image .user-info-active {
+      .article .panel-heading .thumbnail-image .user-info-active {
         width: 200px; }
-        .articles .article .panel-heading .thumbnail-image .user-info-active a {
+        .article .panel-heading .thumbnail-image .user-info-active a {
           display: block; }
-  .articles .article .panel-body {
+  .article .panel-body {
     padding: 40px;
     line-height: 1.45em; }
-    .articles .article .panel-body h1 {
+    .article .panel-body h1 {
       margin-top: 0;
       margin-bottom: 1em; }
-  .articles .article .panel-footer {
+  .article .panel-footer {
     padding: 35px 40px;
     border-top: 0;
     background-color: #f7f7f7;
     color: #7f7f7f; }
-    .articles .article .panel-footer ul li {
+    .article .panel-footer ul li {
       padding: 3px 15px 3px 0; }
-    .articles .article .panel-footer a {
+    .article .panel-footer a {
       color: #8c8c8c; }
-  .articles .article .continue-reading {
+  .article .continue-reading {
     margin-top: 20px; }
-    .articles .article .continue-reading a {
+    .article .continue-reading a {
       color: #000;
       border-bottom: 1px solid #000;
       transition: color .3s; }
-      .articles .article .continue-reading a:hover, .articles .article .continue-reading a:active, .articles .article .continue-reading a:focus {
+      .article .continue-reading a:hover, .article .continue-reading a:active, .article .continue-reading a:focus {
         color: #03A9F4;
         border-bottom: 1px solid #03A9F4;
         text-decoration: none; }
@@ -302,6 +304,35 @@ header {
     .articles .pagination li a:hover {
       background-color: #03A9F4;
       color: #fff; }
+
+.article-single.panel {
+  border: 0;
+  -webkit-box-shadow: rgba(46, 61, 73, 0.2) 0px 0px 1px 0px;
+  -moz-box-shadow: rgba(46, 61, 73, 0.2) 0px 0px 1px 0px;
+  box-shadow: rgba(46, 61, 73, 0.2) 0px 0px 1px 0px; }
+  .article-single.panel:hover {
+    -webkit-box-shadow: rgba(46, 61, 73, 0.2) 0px 0px 1px 0px;
+    -moz-box-shadow: rgba(46, 61, 73, 0.2) 0px 0px 1px 0px;
+    box-shadow: rgba(46, 61, 73, 0.2) 0px 0px 1px 0px; }
+
+.article-comments form textarea {
+  resize: vertical; }
+
+.article-comments form .form-control {
+  border-color: #e5e5e5;
+  padding: 20px 20px;
+  font-size: 1em;
+  -webkit-box-shadow: initial;
+  -moz-box-shadow: initial;
+  box-shadow: initial; }
+  .article-comments form .form-control:focus {
+    border-color: transparent;
+    -webkit-box-shadow: #03A9F4 0px 0px 1px 1px;
+    -moz-box-shadow: #03A9F4 0px 0px 1px 1px;
+    box-shadow: #03A9F4 0px 0px 1px 1px; }
+
+.article-comments form label {
+  color: #8c8c8c; }
 
 @media screen and (max-width: 991px) {
   .sidebar {

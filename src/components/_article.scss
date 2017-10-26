@@ -1,169 +1,168 @@
+.article {
+	margin-bottom: $primary-margin;
+	
+	&.panel {
+		border: 0;
+		@include box-shadow(rgba(46,61,73,0.2) 5px 5px 25px 0px);
+		transition: all 0.3s ease;
+		&:hover {
+			box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+		}
+	}
 
-.articles {
-	.article {
-		margin-bottom: $primary-margin;
+	.panel-heading {
+		background-color: transparent;
+		border-color: transparent;
+		border: 0;
+		padding: 0;
+		position: relative;
 		
-		&.panel {
-			border: 0;
-			box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
-			transition: all 0.3s ease;
-			&:hover {
-				box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			background-color: $primary-color;
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			opacity: .65;
+		}
+
+		h1 {
+			position: absolute;
+			top: $primary-margin / 1.5;
+			left: $primary-margin / 1.5;
+			color: #fff;
+			text-shadow: 1px 1px 0 darken($primary-color, 20);
+			margin-top: 0;
+			z-index: 1;
+
+			@media screen and (max-width: 640px) {
+				font-size: $h1-font-size / 1.4;
 			}
 		}
 
-		.panel-heading {
-			background-color: transparent;
-			border-color: transparent;
-			border: 0;
-			padding: 0;
-			position: relative;
-			
-			&::after {
-				content: "";
-				width: 100%;
-				height: 100%;
-				background-color: $primary-color;
+		.thumbnail-image {
+			max-height: 165px;
+			min-height: 165px;
+			overflow: hidden;
+
+			a.user {
+				width: 60px;
+				height: 60px;
 				position: absolute;
-				left: 0;
-				top: 0;
-				display: block;
-				opacity: .65;
-			}
-
-			h1 {
-				position: absolute;
-				top: $primary-margin / 1.5;
-				left: $primary-margin / 1.5;
-				color: #fff;
-				text-shadow: 1px 1px 0 darken($primary-color, 20);
-				margin-top: 0;
-				z-index: 1;
-
-				@media screen and (max-width: 640px) {
-					font-size: $h1-font-size / 1.4;
-				}
-			}
-
-			.thumbnail-image {
-				max-height: 165px;
-				min-height: 165px;
+				bottom: -30px;
+				left: 40px;
+				z-index: 2;
+				border-radius: 50%;
 				overflow: hidden;
-
-				a.user {
+				box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
+				
+				img {
+					position: absolute;
+					top: 50%;
+					left: 50%;
 					width: 60px;
 					height: 60px;
-					position: absolute;
-					bottom: -30px;
-					left: 40px;
-					z-index: 2;
-					border-radius: 50%;
-					overflow: hidden;
-					box-shadow: 0 0 8px rgba(0,0,0,.18), 0 8px 16px rgba(0,0,0,.36);
-					
-					img {
-						position: absolute;
-						top: 50%;
-						left: 50%;
-						width: 60px;
-						height: 60px;
-						margin-top: -30px; /* Half the height */
-						margin-left: -30px; /* Half the width */
-					 	display: block;
-					 	max-width: 60px;
-					  	max-height:60px;
-					  	width: auto;
-					  	height: auto;
-					}
+					margin-top: -30px; /* Half the height */
+					margin-left: -30px; /* Half the width */
+				 	display: block;
+				 	max-width: 60px;
+				  	max-height:60px;
+				  	width: auto;
+				  	height: auto;
 				}
+			}
+			
+			.user-info {
+				width: 0%;
+			    height: 60px;
+			    background: $light-grey;
+			    border-radius: 0 50px 50px 0;
+			    display: block;
+			    position: absolute;
+			    bottom: -31px;
+			    left: 65px;
+			    z-index: 1;
+			    -webkit-transition: width .5s ease-in-out;
+			    -moz-transition: width .5s ease-in-out;
+			    -o-transition: width .5s ease-in-out;
+			    transition: width .5s ease-in-out;
 				
-				.user-info {
-					width: 0%;
-				    height: 60px;
-				    background: $light-grey;
-				    border-radius: 0 50px 50px 0;
-				    display: block;
-				    position: absolute;
-				    bottom: -31px;
-				    left: 65px;
-				    z-index: 1;
-				    -webkit-transition: width .5s ease-in-out;
-				    -moz-transition: width .5s ease-in-out;
-				    -o-transition: width .5s ease-in-out;
-				    transition: width .5s ease-in-out;
+				h4 {
+					margin-top: 0;
+				}
+
+			    a {
+			    	display: none;
+			    	padding-top: 20px;
+			    	color: darken($light-grey, 40);
 					
-					h4 {
-						margin-top: 0;
-					}
+					-webkit-transition: all .3s ease-in-out;
+				    -moz-transition: all .3s ease-in-out;
+				    -o-transition: all .3s ease-in-out;
+				    transition: all .3s ease-in-out;
 
-				    a {
-				    	display: none;
-				    	padding-top: 20px;
-				    	color: darken($light-grey, 40);
-						
-						-webkit-transition: all .3s ease-in-out;
-					    -moz-transition: all .3s ease-in-out;
-					    -o-transition: all .3s ease-in-out;
-					    transition: all .3s ease-in-out;
-
-				    	&:hover {
-				    		color: $primary-color;
-				    	}
-				    }
-				}
-
-				.user-info-active {
-					width: 200px;
-					a {
-						display: block;
-					}
-				}
-			}
-		}
-		
-
-		.panel-body {
-			padding: $primary-padding/1.5;
-			line-height: 1.45em;
-
-			h1 {
-				margin-top: 0;
-				margin-bottom: 1em;
+			    	&:hover {
+			    		color: $primary-color;
+			    	}
+			    }
 			}
 
-		}
-		
-		.panel-footer {
-			padding: 35px $primary-padding/1.5;
-			border-top: 0;
-			background-color: $article-footer-background-color;
-			color: darken($light-grey, 45);
-
-			ul li {
-				padding: 3px 15px 3px 0;
-			}
-
-			a {
-				color: darken($light-grey, 40);
-			}
-		}
-		.continue-reading {
-			margin-top: 20px;
-			a {
-				// font-size: 1.125em;
-				color: #000;
-				border-bottom: 1px solid #000;
-				transition: color .3s;
-
-				&:hover, &:active, &:focus {
-					color: $primary-color;
-					border-bottom: 1px solid $primary-color;
-					text-decoration: none;
+			.user-info-active {
+				width: 200px;
+				a {
+					display: block;
 				}
 			}
 		}
 	}
+	
 
+	.panel-body {
+		padding: $primary-padding/1.5;
+		line-height: 1.45em;
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 1em;
+		}
+
+	}
+	
+	.panel-footer {
+		padding: 35px $primary-padding/1.5;
+		border-top: 0;
+		background-color: $article-footer-background-color;
+		color: darken($light-grey, 45);
+
+		ul li {
+			padding: 3px 15px 3px 0;
+		}
+
+		a {
+			color: darken($light-grey, 40);
+		}
+	}
+	.continue-reading {
+		margin-top: 20px;
+		a {
+			// font-size: 1.125em;
+			color: #000;
+			border-bottom: 1px solid #000;
+			transition: color .3s;
+
+			&:hover, &:active, &:focus {
+				color: $primary-color;
+				border-bottom: 1px solid $primary-color;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.articles {
 	.pagination {
 		box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
 		transition: all .3s ease;

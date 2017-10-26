@@ -1,0 +1,35 @@
+
+.article-single {
+	&.panel {
+		border: 0;
+		@include box-shadow(rgba(46,61,73,0.2) 0px 0px 1px 0px);
+		
+		&:hover {
+			@include box-shadow(rgba(46,61,73,0.2) 0px 0px 1px 0px);
+		}
+	}
+}
+
+.article-comments {
+	form {
+		textarea {
+			resize: vertical;
+		}
+
+		.form-control {
+			border-color: darken($light-grey, 5);
+			padding: 20px 20px;
+			font-size: 1em;
+			@include box-shadow(initial);
+
+			&:focus {
+				border-color: transparent;
+				@include box-shadow($primary-color 0px 0px 1px 1px);
+			}
+		}
+
+		label {
+			color: darken($light-grey, 40);
+		}
+	}
+}
