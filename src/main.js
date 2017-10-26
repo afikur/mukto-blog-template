@@ -3,6 +3,9 @@ var $ = jQuery;
 $(document).ready(function() {
 	//article user-image-hover-effect
 	if($(window).width() >= 1170) {
+		$(".article a.user").click(function(event) {
+			event.preventDefault();
+		})
 		$(".article a.user").hover(function() {
 			$(".article .user-info").addClass("user-info-active");
 		});
