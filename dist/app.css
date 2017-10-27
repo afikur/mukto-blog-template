@@ -320,19 +320,35 @@ header {
 
 .article-comments form .form-control {
   border-color: #e5e5e5;
+  background-color: #f2f2f2;
   padding: 20px 20px;
   font-size: 1em;
   -webkit-box-shadow: initial;
   -moz-box-shadow: initial;
-  box-shadow: initial; }
+  box-shadow: initial;
+  -webkit-transition: 0.3s linear all;
+  -moz-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all; }
   .article-comments form .form-control:focus {
     border-color: transparent;
+    background-color: #fff;
     -webkit-box-shadow: #03A9F4 0px 0px 1px 1px;
     -moz-box-shadow: #03A9F4 0px 0px 1px 1px;
     box-shadow: #03A9F4 0px 0px 1px 1px; }
 
 .article-comments form label {
   color: #8c8c8c; }
+
+.article-comments form input.btn {
+  color: #8c8c8c;
+  -webkit-transition: 0.3s linear all;
+  -moz-transition: 0.3s linear all;
+  -o-transition: 0.3s linear all;
+  transition: 0.3s linear all; }
+  .article-comments form input.btn:hover {
+    color: #fff;
+    background-color: #03A9F4; }
 
 @media screen and (max-width: 991px) {
   .sidebar {

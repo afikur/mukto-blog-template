@@ -18,18 +18,30 @@
 
 		.form-control {
 			border-color: darken($light-grey, 5);
+			background-color: $light-grey;
 			padding: 20px 20px;
 			font-size: 1em;
 			@include box-shadow(initial);
+			@include transition(.3s linear all);
 
 			&:focus {
 				border-color: transparent;
+				background-color: #fff;
 				@include box-shadow($primary-color 0px 0px 1px 1px);
 			}
 		}
 
 		label {
 			color: darken($light-grey, 40);
+		}
+
+		input.btn {
+			color: darken($light-grey, 40);
+			@include transition(.3s linear all);
+			&:hover {
+				color: #fff;
+				background-color: $primary-color;
+			}
 		}
 	}
 }

@@ -82,7 +82,8 @@ $(document).ready(function() {
 	if($(window).width() >= 1170) {
 		$(".article a.user").click(function(event) {
 			event.preventDefault();
-		})
+		});
+		
 		$(".article a.user").hover(function() {
 			$(".article .user-info").addClass("user-info-active");
 		});
@@ -102,22 +103,21 @@ $(document).ready(function() {
 	
 	$('.title_items').click(function() {
 	  
-	  current = $(this).next().find('li');
-	  
-	  $(this).toggleClass('active');
-	  current.toggleClass('visible');
-	  
-	  if ($(this).hasClass('active')) {
-	    for( i = 0; i <= current.length; i++ ) {
-	      $(current[i]).css('transition-delay', transition_timeout * i + 'ms');
-	    }
-	  }
-	  else {
-	    for( i = current.length, j = -1; i >= 0; i--, j++) {
-	      $(current[i]).css('transition-delay', transition_timeout * j + 'ms');
-	    }
-	  }
-	
+		current = $(this).next().find('li');
+
+		$(this).toggleClass('active');
+		current.toggleClass('visible');
+
+		if ($(this).hasClass('active')) {
+			for( i = 0; i <= current.length; i++ ) {
+				$(current[i]).css('transition-delay', transition_timeout * i + 'ms');
+			}
+		}
+		else {
+			for( i = current.length, j = -1; i >= 0; i--, j++) {
+				$(current[i]).css('transition-delay', transition_timeout * j + 'ms');
+			}
+		}
 	});
 });
 
