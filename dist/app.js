@@ -85,16 +85,17 @@ $(document).ready(function() {
 		});
 		
 		$(".article a.user").hover(function() {
-			$(".article .user-info").addClass("user-info-active");
+			console.log($(this).siblings(".user-info"));
+			$(this).siblings(".user-info").addClass("user-info-active");
 		});
 
 		$(".article .user-info").mouseleave(function() {
-			$(".article .user-info").removeClass("user-info-active");
+			$(this).removeClass("user-info-active");
 		});
 	} else {
 		$(".article a.user").click(function(event) {
 			event.preventDefault();
-			$(".article .user-info").toggleClass("user-info-active");
+			$(this).siblings(".article .user-info").toggleClass("user-info-active");
 		});
 	}
 
